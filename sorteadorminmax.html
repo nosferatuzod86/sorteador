@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa que sorteia um número aleatório</title>
+</head>
+<body>
+    <h1>Sorteador em Javascript</h1>
+    <br>
+    <h1>Sorteador de números que você escolher.</h1>
+    <br>
+    Digite o número inicial que vai ter a rifa: <input type="number" name="txtnumero" id="txtnumero"> 
+    <br>
+    Digite o número final que vai ter a rifa: <input type="number" name="txtnumero2" id="txtnumero2"> 
+    <br>
+    <input type="button" value="Realizar Sorteio" onclick="sortear()">
+    <div id="res">
+    </div>
+ 
+    <script>
+        function sortear() {
+            var txtnum = window.document.getElementById('txtnumero')
+            var nummin =Number(txtnum.value)
+            var txtnum2 = window.document.getElementById('txtnumero2')
+            var nummax =Number(txtnum2.value)
+            var res = window.document.getElementById('res')
+            var randomNumero = Math.floor((Math.random() * (nummax - nummin +1) + nummin));
+            res.innerHTML = `<p>O número sorteado foi: ${randomNumero}.</p>`
+        }
+    </script>
+</body>
+</html>
