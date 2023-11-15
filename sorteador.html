@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa que sorteia um número aleatório</title>
+    <script type="text/javascript" src="sorteador.js"></script>
 </head>
 <body>
     <h1>Sorteador em Javascript</h1>
@@ -15,16 +16,6 @@
     <input type="button" value="Realizar Sorteio" onclick="sortear()">
     <div id="res">
     </div>
- 
-    <script>
-        function sortear() {
-            var txtnum = window.document.getElementById('txtnumero')
-            var num =Number(txtnum.value)
-            var res = window.document.getElementById('res')
-            var randomNumero = Math.floor((Math.random() * (num))+1);
-            res.innerHTML = `<p>O número sorteado foi: ${randomNumero}.</p>`
-        }
-    </script>
 </body>
 </html>
  
